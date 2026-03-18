@@ -19,7 +19,7 @@ def predict_form():
 
     prediction = model.predict([[income, score]])
 
-    print(prediction)s
+    print(prediction)
 
     return render_template("index.html", prediction=int(prediction[0]))
 
