@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>KMeans Prediction</title>
+</head>
+<body>
+
+    <h2>Customer Cluster Prediction</h2>
+
+    <form action="/predict_form" method="post">
+        <label>Annual Income:</label><br>
+        <input type="number" name="income" required><br><br>
+
+        <label>Spending Score:</label><br>
+        <input type="number" name="score" required><br><br>
+
+        <button type="submit">Predict</button>
+    </form>
+
+    {% if prediction is not none %}
+        <h3>Cluster: {{ prediction }}</h3>
+    {% endif %}
+
+</body>
+</html>
